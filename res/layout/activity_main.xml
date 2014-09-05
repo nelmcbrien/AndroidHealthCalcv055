@@ -1,0 +1,128 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.healthcalcandroid.MainActivity" >
+
+    <EditText
+        android:id="@+id/feetInText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/ageInText"
+        android:layout_alignRight="@+id/ageInText"
+        android:layout_below="@+id/ageInText"
+        android:ems="10"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/inchesInText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/feetInText"
+        android:layout_alignRight="@+id/feetInText"
+        android:layout_below="@+id/feetInText"
+        android:ems="10"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/weightInText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/inchesInText"
+        android:layout_alignRight="@+id/inchesInText"
+        android:layout_below="@+id/inchesInText"
+        android:ems="10"
+        android:inputType="number" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/inchesInText"
+        android:layout_alignBottom="@+id/inchesInText"
+        android:layout_alignLeft="@+id/textView3"
+        android:text="@string/height_inches" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/weightInText"
+        android:layout_alignBottom="@+id/weightInText"
+        android:layout_alignLeft="@+id/textView4"
+        android:text="@string/weight_pounds" />
+
+    <EditText
+        android:id="@+id/outputText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView5"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/weightInText"
+        android:ems="10"
+        android:inputType="none" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/ageInText"
+        android:layout_alignBottom="@+id/ageInText"
+        android:text="@string/age" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/feetInText"
+        android:layout_alignBottom="@+id/feetInText"
+        android:layout_alignLeft="@+id/textView2"
+        android:text="@string/height_feet" />
+
+    <EditText
+        android:id="@+id/ageInText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/outputText"
+        android:layout_marginTop="87dp"
+        android:layout_toRightOf="@+id/textView3"
+        android:ems="10"
+        android:inputType="number" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true" >
+
+        <RadioButton
+            android:id="@+id/radioButtonMale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="@string/male" />
+
+        <RadioButton
+            android:id="@+id/radioButtonFemale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/female" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/goButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/ageInText"
+        android:layout_alignTop="@+id/radioGroup1"
+        android:layout_marginLeft="54dp"
+        android:text="@string/go_button" />
+
+</RelativeLayout>
